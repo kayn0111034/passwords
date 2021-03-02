@@ -22,9 +22,9 @@ def password_with_num_gen(char_amount, number_amount):
 
     password=[]
     pass_num=[]
-    insert_ord=0
+    counter=0
 
-    for i in range(char_amount-number_amount):
+    for i in range(int(char_amount-number_amount)):
 
         password_letters=random.choice(letters)
         password.append(password_letters)
@@ -33,10 +33,9 @@ def password_with_num_gen(char_amount, number_amount):
         password_numbers=random.choice(numbers)
         pass_num.append(password_numbers)
 
-    for i in range(number_amount):
-        password.insert(pass_num[insert_ord],random.randint(0,char_amount))
+        password.insert(int(pass_num[counter],random.randint(0,char_amount))
         #returns TypeError: 'str' object cannot be interpreted as an integer
-        insert_ord+=1
+        counter+=1
 
     password=''.join(password)
     print(password)
