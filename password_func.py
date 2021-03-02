@@ -33,9 +33,11 @@ def password_with_num_gen(char_amount, number_amount):
         password_numbers=random.choice(numbers)
         pass_num.append(password_numbers)
 
-        password.insert(int(pass_num[counter],random.randint(0,char_amount))
-        #returns TypeError: 'str' object cannot be interpreted as an integer
+        password.insert(random.randint(0,char_amount),pass_num[counter])
+
         counter+=1
+#single line comment changes color of print and function for some reason
+
 
     password=''.join(password)
     print(password)
